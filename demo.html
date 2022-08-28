@@ -1,0 +1,164 @@
+<!-- <!DOCTYPE html>
+<html>
+  
+<head>
+    <style>
+        .red{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            color: white;
+            float: left;z-index: ;
+        }
+        .red::before{
+            content: "hello world";
+            z-index:5 ;
+            background-image: url("Burger\ Image1.png");
+            background-size: cover;
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 400px;
+            left: 0;
+        }
+        .blue{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            color: white;
+            float: left;
+           
+
+
+        }
+        .green{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            color: white;
+            float: left;
+
+        }
+        .main{
+            border: 2px solid brown;
+        }
+.red:hover{
+    background-color: green;
+}
+
+    </style>
+</head>
+  
+<body >
+    <div class="main">
+        <div class="container">
+            <div class="red "></div>
+            <div class="blue"></div>
+            <div class="green"></div>
+        </div>
+    </div>
+
+    
+</body>
+  
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .hamburger {
+            position: fixed;
+            z-index: 100;
+            top: 1rem;
+            right: 1rem;
+            padding: 4px;
+            border: black solid 1px;
+            background: white;
+            cursor: pointer;
+        }
+
+        .closeIcon {
+            display: none;
+        }
+
+        menu {
+            position: fixed;
+            transform: translateY(-100%);
+            transition: transform 0.2s;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 99;
+            background: black;
+            color: white;
+            list-style: none;
+            padding-top: 4rem;
+        }
+
+        .showMenu {
+            transform: translateY(0);
+        }
+    </style>
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<ul class=" menu">
+
+</head>
+
+<body>
+    <li><a class="menuItem" href="#">Home</a></li>
+    <li><a class="menuItem" href="#">Profile</a></li>
+    <li><a class="menuItem" href="#">About</a></li>
+    <li><a class="menuItem" href="#">Contacts</a></li>
+    </ul>
+    <button class="hamburger">
+        <!-- material icons https://material.io/resources/icons/ -->
+        <i class="menuIcon material-icons">menu</i>
+        <i class="closeIcon material-icons">close</i>
+    </button>, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+
+
+
+
+
+<script>
+    const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger= document.querySelector(".hamburger");
+const closeIcon= document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
+
+function toggleMenu() {
+  if (menu.classList.contains("showMenu")) {
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+  } else {
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
+  }
+}
+
+hamburger.addEventListener("click", toggleMenu);
+const menuItems = document.querySelectorAll(".menuItem");
+menuItems.forEach( 
+  function(menuItem) { 
+    menuItem.addEventListener("click", toggleMenu);
+  }
+)
+</script>
+
+</body>
+
+</html>
